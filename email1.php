@@ -16,17 +16,20 @@ if(isset($_POST['email'])) {
 
 
     // validation expected data exists
-    if(!isset($_POST['first_name']) ||
+    if(!isset($_POST['name']) ||
         !isset($_POST['email']) ||
+        !isset($_POST['phone']) ||
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
 
 
 
-    $first_name = $_POST['first_name']; // required
+    $name = $_POST['name']; // required
 
     $email_from = $_POST['email']; // required
+
+    $phone_from = $_POST['phone']; // required
 
     $comments = $_POST['comments']; // required
 
@@ -61,9 +64,11 @@ if(isset($_POST['email'])) {
 
 
 
-    $email_message .= "First Name: ".clean_string($first_name)."\n";
+    $email_message .= "First Name: ".clean_string($name)."\n";
 
     $email_message .= "Email: ".clean_string($email_from)."\n";
+
+    $email_message .= "Number: ".clean_string($phone_from)."\n";
 
     $email_message .= "Comments: ".clean_string($comments)."\n";
 
@@ -74,11 +79,11 @@ $headers = 'From: '.$email_from."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);
 ?>
 
-<!-- include your own success html here -->
+    <!-- include your own success html here -->
 
-Thank you for contacting us. We will be in touch with you very soon.
+    Thank you for contacting us. We will be in touch with you very soon.
 
-<?php
+    <?php
 
 }
 ?>
