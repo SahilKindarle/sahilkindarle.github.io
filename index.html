@@ -674,26 +674,30 @@
                                     <div class="col-md-7">
                                         <div id="contact-form">
                                             <div id="message"></div>
-                                            <form class="custom-form" action="https://sahilkindarle.000webhostapp.com/email.php" name="contactform" id="contactform">
+                                            <form class="custom-form"name="contactform" method="post" action="https://sahilkindarle.000webhostapp.com/email1-3.php">
                                                 <fieldset>
                                                     <div class="row">
                                                         <div class="col-md-6">
                                                             <label><i class="fal fa-user"></i></label>
-                                                            <input type="text" name="name" id="name" placeholder="Your Name *" value="" />
+                                                            <input type="text" name="first_name" placeholder="First Name *" value="" />
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label><i class="fal fa-user"></i></label>
+                                                            <input type="text" name="last_name" placeholder="Last Name *" value="" />
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label><i class="fal fa-envelope"></i> </label>
-                                                            <input type="text" name="email" id="email" placeholder="Email Address *" value="" />
+                                                            <input type="text" name="email" placeholder="Email Address *" value="" />
                                                         </div>
                                                         <div class="col-md-6">
                                                             <label><i class="fal fa-mobile-android"></i> </label>
-                                                            <input type="text" name="phone" id="phone" placeholder="Phone *" value="" />
+                                                            <input type="text" name="telephone" placeholder="Phone *" value="" />
                                                         </div>
                                                     </div>
-                                                    <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
+                                                    <textarea name="comments" cols="40" rows="3" placeholder="Your Message:"></textarea>
 
                                                     <div class="clearfix"></div>
-                                                    <button class="btn float-btn flat-btn color-btn" id="submit" type="submit" value="Submit">Send Message</button>
+                                                    <button class="btn float-btn flat-btn color-btn" type="submit" value="Submit">Send Message</button>
                                                 </fieldset>
                                             </form>
                                         </div>
