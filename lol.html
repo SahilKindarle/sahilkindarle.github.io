@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
 
-<body>
-    <form action="https://sahilkindarle.000webhostapp.com/phonegap/add.php" method="post">
+<body onload="another()">
+    <form action="https://sahilkindarle.000webhostapp.com/sahil.php" method="post">
         <div class="row">
             <div class="input-field col s6">
                 <input placeholder="Placeholder" id="fullname" type="text" class="validate">
@@ -27,10 +27,36 @@
                 <label for="password">Password</label>
             </div>
 
-            <button class="btn waves-effect waves-light" type="submit">Submit</button>
+            <button class="btn waves-effect waves-light" type="submit" onclick="another()">Submit</button>
 
         </div>
     </form>
+    <script>
+        function another()
+        {
+            window.location.href("https://sahilkindarle.github.io")
+        }
+    </script>
 </body>
 
 </html>
+
+
+
+<!-- 
+<html>
+<head>
+<script type="text/javascript">
+    function load()
+    {
+        window.location.href = "https://externalpage.com";
+    }
+</script>
+</head>
+
+<body onload="load()">
+   <h1>Hello World!</h1>
+</body>
+</html> 
+
+ -->
